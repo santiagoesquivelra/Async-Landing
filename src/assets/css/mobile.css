@@ -1,0 +1,297 @@
+:root[data-tema="light"] {
+    --bg-color: #FCFBF7;
+    --atras-color: #000;
+    --show-sol: block;
+    --show-luna: none;
+    --text-color: #212221;
+    --mensaje-modo: "Modo claro";
+    --animacion-sol: rotate 15s linear infinite;
+    --color-switch: #c7bfc7;
+    --color-activo: #c1c1c1;
+    --border-option: 20px solid #fff;
+    --card-color: #FFF;
+    --skills-color: whitesmoke;
+}
+
+:root[data-tema="dark"] {
+    --bg-color: #000000;
+    --atras-color: #FFF;
+    --show-sol: none;
+    --show-luna: block;
+    --text-color: #FFF;
+    --blue-gray-900: #0F172A;
+    --mensaje-modo: "Modo oscuro";
+    --animacion-star: show 4s alternate infinite both;
+    --color-switch: #c4c4c4;    
+    --color-activo: #FFF;
+    --border-option: none;
+    --card-color: #333639;
+    --skills-color: #000;
+    --swiper-theme-color: #000;
+    --transform-option: translateX(100%);
+}
+
+.root {
+    --main-color: #000000;
+    --secondary-color: #FFFFFF;
+    --blue-gray: #F1F5F9;
+    --blue-gray-400: #94A3B8;
+    --blue-gray-300: #CBD5E1;
+    --blue-gray-600: #475569;
+    --blue-gray-900: #0F172A;
+    --rose-color: #BE123C;
+    --amber-color: #FBBF24;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    view-transition-name: root;
+}
+
+body, html {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html {
+    display: block;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--bg-color);
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; 
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo img {
+    width: 2.188em;
+    height: 2.188em;
+}
+
+.icon-menu {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--atras-color);
+}
+
+section {
+    display: flex;
+    padding: 6rem 2rem 0rem 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    align-self: stretch;
+    background: var(--rose-color, #881337);
+}
+
+.main-text {
+    color: var(--text-color, #FFF);
+    /* Heading/4 */
+    font-family: Roboto;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 2.75rem */
+}
+
+.searchs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchs input {
+    display: flex;
+    height: 3rem;
+    padding: 0.75rem 1rem;
+    align-items: left;
+    gap: 0.5rem;
+    flex: 1 0 0;
+    margin-right: 15px;
+    border-radius: 0.3125rem;
+    background: var(--atras-color, #FFF);
+}
+
+.searchs button {
+    display: flex;
+    padding: 0.75rem;
+    justify-content: right;
+    align-items: center;
+    border-radius: 0.3125rem;
+    border: 2px solid var(--rose-color, #BE123C);
+    background: var(--rose-color, #BE123C);
+    color: var(--text-color)
+}
+
+.menu-container .menu-list {
+    display: flex;
+    height: 1.5rem;
+    padding: 0.5rem 0.25rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: #fff;
+    border-radius: 0.25rem;
+    border: 1px solid var(--White, #FFF);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75em;
+    margin: 0.25em 0.625em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9em; /* Tamaño de la fuente más pequeño */
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color: #555;
+    }
+}
+
+.image-container img {
+    height: 100%;
+    width: 100%;
+}
+
+.grayzone {
+    display: flex;
+    padding: 0rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    align-self: stretch;
+    background-color: var(--color-switch);
+}
+
+.grayzone img {
+    width: 80%;
+    height: 80%;
+}
+
+.cards {
+    display: flex;
+    padding: 3rem 0rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    align-self: stretch;
+    background: var(--blue-gray-400, #F1F5F9);
+}
+
+.cards h1 {
+    color: var(--blue-gray-900, #0F172A);
+    /* Heading/5 */
+    font-family: Roboto;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 2.2rem */
+    margin-right: 20px;
+}
+
+.cards a {
+    display: flex;
+    justify-content: left;
+    font-family: Roboto;
+    font-size: 1rem;
+    font-style: normal;
+    align-items: left;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: #2563EB;
+}
+
+*[class^='iconoir-']::before, *[class*=' iconoir-']::before {
+    content: ' ';
+    display: block;
+    background: currentColor;
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    width: 20px;
+    height: 20px;
+}
+
+/* Slider Cards */
+.container {
+    width: 100%;
+    padding: 10px 40px;
+}
+
+.container .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.container .swiper-slide {
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    border-radius: 15px;
+    text-align: start;
+    box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.25);
+    margin: 10px;
+}
+
+.container .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.container .swiper-slide .card-description {
+    padding: 1rem 1rem;
+}
+
+.container .swiper-slide .card-title,
+.container .swiper-slide .card-text {
+    margin-bottom: 0.5rem;
+}
+
+.container .swiper-slide .card-link {
+    text-align: center;
+}
+
+.container .swiper-slide .card-link a {
+    text-decoration: none;
+    color: var();
+}
+
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    header {
+        text-align: center; /* Centra el texto en el modo columna */
+    }
+
+    .icon-menu {
+        display: block; /* Muestra el ícono del menú */
+    }
+}
